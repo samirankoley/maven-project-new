@@ -152,7 +152,7 @@
 		</dependency>
 	</dependencies>
 
-	<!-- <repositories>
+	<repositories>
 		<repository>
 			<id>Central</id>
 			<name>Central</name>
@@ -166,7 +166,7 @@
 			<layout>default</layout>
 		</repository>
 		<repository>
-			<id>MuleRepository</id>This id should be same as server id in setting.xml
+			<id>MuleRepository</id><!-- This id should be same as server id in setting.xml -->
 			<name>nexus-ee</name>
 			<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
 			<layout>default</layout>
@@ -177,7 +177,7 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-	</repositories> -->
+	</repositories>
 	
 	<pluginRepositories>
 		<pluginRepository>
