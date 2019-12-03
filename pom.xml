@@ -153,7 +153,7 @@
 	</dependencies>
 
 	<repositories>
-		<repository>
+		<!-- <repository>
 			<id>Central</id>
 			<name>Central</name>
 			<url>http://repo1.maven.org/maven2/</url>
@@ -164,7 +164,7 @@
 			<name>MuleSoft Releases Repository</name>
 			<url>http://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
-		</repository>
+		</repository> -->
 		<repository>
 			<id>MuleRepository</id><!-- This id should be same as server id in setting.xml -->
 			<name>nexus-ee</name>
