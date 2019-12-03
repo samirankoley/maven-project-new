@@ -19,6 +19,30 @@
 
 	<build>
 		<plugins>
+
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<deploymentType>cloudhub</deploymentType>
+					<muleVersion>3.9.1</muleVersion>
+					<username>samiran_koley</username>
+					<password>samb11!H</password>
+					<workerType>Micro</workerType>
+					<redeploy>true</redeploy>
+					<environment>Production</environment>
+				</configuration>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
@@ -153,18 +177,10 @@
 	</dependencies>
 
 	<repositories>
-		<!-- <repository>
-			<id>Central</id>
-			<name>Central</name>
-			<url>http://repo1.maven.org/maven2/</url>
-			<layout>default</layout>
-		</repository>
-		<repository>
-			<id>mulesoft-releases</id>
-			<name>MuleSoft Releases Repository</name>
-			<url>http://repository.mulesoft.org/releases/</url>
-			<layout>default</layout>
-		</repository> -->
+		<!-- <repository> <id>Central</id> <name>Central</name> <url>http://repo1.maven.org/maven2/</url> 
+			<layout>default</layout> </repository> <repository> <id>mulesoft-releases</id> 
+			<name>MuleSoft Releases Repository</name> <url>http://repository.mulesoft.org/releases/</url> 
+			<layout>default</layout> </repository> -->
 		<repository>
 			<id>MuleRepository</id><!-- This id should be same as server id in setting.xml -->
 			<name>nexus-ee</name>
@@ -175,24 +191,23 @@
 			</releases>
 			<snapshots>
 				<enabled>false</enabled>
-			</snapshots>			
+			</snapshots>
 		</repository>
-		
+
 		<repository>
-            <id>anypoint-exchange</id>
-            <name>Anypoint Exchange</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v1/maven</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
-            <id>mulesoft-releases</id>
-            <name>MuleSoft Releases Repository</name>
-            <url>https://repository.mulesoft.org/releases/</url>
-            <layout>default</layout>
-        </repository>
-        
+			<id>anypoint-exchange</id>
+			<name>Anypoint Exchange</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v1/maven</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>mulesoft-releases</id>
+			<name>MuleSoft Releases Repository</name>
+			<url>https://repository.mulesoft.org/releases/</url>
+			<layout>default</layout>
+		</repository>
 	</repositories>
-	
+
 	<pluginRepositories>
 		<pluginRepository>
 			<id>mulesoft-release</id>
